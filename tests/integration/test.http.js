@@ -200,5 +200,4 @@ describe('test.http.js', function () {
       res.rows.should.have.length(numDocs);
     });
   });
-
 });
