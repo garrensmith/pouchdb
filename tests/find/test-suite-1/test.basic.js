@@ -366,6 +366,7 @@ testCases.push(function (dbType, context) {
         resp.should.deep.equal({
           "total_rows": 1,
             "indexes":[{
+              "build_status": "ready",
               "ddoc": null,
               "name":"_all_docs",
                 "type":"special",
