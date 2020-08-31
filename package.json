@@ -14,7 +14,7 @@
     "test-fuzzy": "TYPE=fuzzy npm run test",
     "test-browser": "npm run build-test && node ./bin/test-browser.js",
     "test-memleak": "mocha -gc tests/memleak",
-    "eslint": "eslint bin/ packages/node_modules/**/src tests/",
+    "eslint": "",
     "dev": "bash bin/run-dev.sh",
     "launch-dev-server": "node ./bin/dev-server.js",
     "test": "bash bin/run-test.sh",
@@ -32,7 +32,8 @@
     "build-perf": "browserify tests/performance/index.js > tests/performance-bundle.js",
     "set-version": "node bin/set-version.js",
     "verify-build": "sh bin/verify-build.sh",
-    "test-webpack": "bash bin/test-webpack.sh"
+    "test-webpack": "bash bin/test-webpack.sh",
+    "test:replication": "COUCH_HOST=http://adm:pass@localhost:15984 GREP=test.issue npm test && COUCH_HOST=http://adm:pass@localhost:15984 GREP=test.sync npm test && COUCH_HOST=http://adm:pass@localhost:15984 GREP=test.replication npm test"
   },
   "dependencies": {
     "argsarray": "0.0.1",
